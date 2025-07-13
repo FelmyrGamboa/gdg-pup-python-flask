@@ -1,7 +1,49 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1 style="text-align: center; font-family: Arial, Helvetica, sans-serif;">Congratulations! You've successfully completed Flask Assignment 2 🎉🎉🎉</h1>
+<style>
+    h1 {
+        text-align: center; 
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    h2 {
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    li {
+        text-align: justify;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    div {
+        display: flex; 
+        justify-content: center;
+    }
+
+    .falling-gato {
+        width: 300px;
+        height: 300px;
+        padding: 2rem;
+    }
+</style>
+
+<h1>Congratulations! You've successfully completed Flask Assignment 2 🎉🎉🎉</h1>
+<div class="Commands">
+    <ul>
+        <h2> Performed Commands </h2>
+        <li><b>python -m venv .venv</b> - installs virtual environment for the certain directory</li>
+        <li><b>\.venv\Scripts\activate</b> - use to activate the virtual environment</li>
+        <li><b>pip install Flask</b> - command to install Flask module</li>
+        <li><b>pip list</b> - lists all python dependencies installed in the environment</li>
+        <li><b>pip freeze > requirements.txt</b> - list all python dependencies and store it into a text file</li>
+        <li><b>rm .venv</b> - used to delete certain files rm {file name}</li>
+    </ul>
+    
+</div>
+
+
 <div style="display: flex; justify-content: center;">
-    <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmN6ejQ5eDhtanUwOW5waGViMWd0OWRlcWtzc3Nkd3Y2YTR2NnJiOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/B4dt6rXq6nABilHTYM/giphy.gif" alt="gwenchana">
+    <img class="falling-gato" src="https://media.tenor.com/HLU81hLh_zUAAAAi/cat-falling.gif" alt="falling gato">
 </div>
 {% endblock %}
