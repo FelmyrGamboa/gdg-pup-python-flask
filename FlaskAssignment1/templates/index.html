@@ -1,7 +1,68 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1 style="text-align: center; font-family: Arial, Helvetica, sans-serif;">Congratulations! You've successfully completed Flask Assignment 1 🎉🎉🎉</h1>
-<div style="display: flex; justify-content: center;">
-    <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNnQ2bXV1eDdmYzlmMXZxaWM5MHV3Z3YxOXZuNmZqZmc3bXJyNWpnNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/QfnJKXzYu3jMoYKhqF/giphy.gif" alt="gwenchana">
+<style>
+    body {
+        overflow: hidden;
+    }
+    h1 {
+        text-align: center; 
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .mexican-cat1 {
+        position: absolute;
+        transform: rotate(50deg);
+        width: 500px; 
+        height: 500px;
+        top: 700px;
+        left: -300px;
+        z-index: 2; 
+        animation: popup-cat1 5s 5s both infinite;
+    }
+
+    .mexican-cat2 {
+        position: absolute; 
+        transform: rotate(-50deg) scaleX(-1);
+        width: 500px; 
+        height: 500px;
+        top: 700px;
+        right: -300px;
+        z-index: 2; 
+        animation: popup-cat2 5s 5s both infinite;
+    }
+
+    @keyframes popup-cat1 {
+        50% {
+            top: 350px;
+            left: -30px;
+        }
+        100% {
+            top: 700px;
+            left: -300px;
+        }
+    }
+
+        @keyframes popup-cat2 {
+        50% {
+            top: 350px;
+            right: -30px;
+        }
+        100% {
+            top: 700px;
+            right: -300px;
+        }
+    }
+</style>
+
+<h1>
+    Congratulations! You've successfully completed Flask Assignment 1 🎉🎉🎉
+</h1>
+<div style="display: flex; justify-content: space-evenly; position: relative;">
+    <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbXprdTU4YnI1bTdpODVieXc2Y2tnbGw4M3lpdGFjZGxrYm5xcDJiaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/F6nQNPCJxbzMXhgRtn/giphy.gif" alt="uiiai" style="width: 300px; height: 300px;">
+    <img src="https://media.tenor.com/HLrXIleGBToAAAAj/transparent-cat.gif" alt="hapi hapi hapi" style="width: 500px; height: 500px; padding-top: 100px;">
+    <img src="https://media.tenor.com/g485TTq4thoAAAAi/cat-cat-dance.gif" alt="uiiai" style="width: 300px; height: 300px;">
+</div>
+<div class="pop-up">
+    <img class="mexican-cat1" src="https://media.tenor.com/_5_dPhYWH90AAAAi/mexican-cat.gif" alt="uiiai">
+    <img class="mexican-cat2" src="https://media.tenor.com/_5_dPhYWH90AAAAi/mexican-cat.gif" alt="uiiai">
 </div>
 {% endblock %}
