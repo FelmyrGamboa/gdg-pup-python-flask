@@ -1,4 +1,10 @@
 {% extends 'base.html' %}
+<title>
+    {% block title %}
+        Kunwari di to phishing
+    {% endblock %}
+</title>
+
 {% block content %}
 <h1>TO DO List kasi limot ako</h1>
 <!-- 
@@ -15,6 +21,11 @@
     <input type="submit">
 </form>
 <ul>
+
+    {% for task in tasks %}
+       <li>{{ task }}</li>
+    {% endfor %}
+
     <!-- 
         Use for loop jinja syntax to iterate over the `tasks`.
         Challenge 2: I deleted the code here because
