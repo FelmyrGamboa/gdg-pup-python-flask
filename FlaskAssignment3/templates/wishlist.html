@@ -1,4 +1,12 @@
 {% extends 'base.html' %}
+
+<title>
+    {% block title%}
+    My Wishlist
+    {% endblock %}
+</title>
+
+
 {% block content %}
 <h1 style="text-align: center; font-family: Arial, Helvetica, sans-serif;">Wishlist:</h1>
 <!-- 
@@ -6,7 +14,7 @@
     render_template, we can use the python variable inside
     jinja.
 -->
-<ul style="text-align: center; font-family: Arial, Helvetica, sans-serif;">
+<ul style="display:flex; flex-direction: column; align-items: center; text-align: justify; font-family: Arial, Helvetica, sans-serif; list-style-position: inside;">
     {% for wish in hilingKo %}
         <li>{{ wish }}</li>
     {% endfor %}
